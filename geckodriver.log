@@ -1,0 +1,26 @@
+1695379074661	geckodriver	INFO	Listening on 127.0.0.1:49360
+1695379077671	mozrunner::runner	INFO	Running command: "C:\\Users\\user\\.cache\\selenium\\firefox\\win64\\117.0.1\\firefox.exe" "--marionette" "--remote-debugging ... 61" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\user\\AppData\\Local\\Temp\\rust_mozprofileFyQIMp"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695379078950	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1695379079084	Marionette	INFO	Listening on port 49379
+WebDriver BiDi listening on ws://127.0.0.1:49361
+Read port: 49379
+1695379081162	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:49361/devtools/browser/8610786b-7291-4583-b782-cff3857b337a
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://accounts.google.com."
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?ifkv=AYZoVhfea1fxG5zdkozvd9MFdfGa07gCgaX-H_ZnntpQojtGADMU5w739mCAjquHPMPMXwxl8EGL9A&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S1493704634%3A1695379084963838&theme=glif line 193 > injectedScript line 2 > eval line 1101 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://accounts.google.com."
+1695379110554	Marionette	INFO	Stopped listening on port 49379
+Dynamically enable window occlusion 1
+console.warn: services.settings: blocklists/addons-bloomfilters sync interrupted by shutdown
+console.warn: services.settings: blocklists/gfx sync interrupted by shutdown
+console.warn: services.settings: main/normandy-recipes-capabilities sync interrupted by shutdown
+console.warn: services.settings: main/partitioning-exempt-urls sync interrupted by shutdown
+console.warn: services.settings: main/search-telemetry-v2 sync interrupted by shutdown
+1695379110636	addons.xpi	ERROR	System addon update list error Error: Failed downloading XML, status: 0, channelStatus: 2147500036, errorCode: 2, reason: error
+console.warn: services.settings: main/devtools-compatibility-browsers sync interrupted by shutdown
+console.warn: services.settings: main/sites-classification sync interrupted by shutdown
+console.warn: services.settings: main/anti-tracking-url-decoration sync interrupted by shutdown
+console.error: (new AbortError("IndexedDB: main/cfr-srg getLastModified() IndexedDB:  execute() A request was aborted, for example through a call to IDBTransaction.abort.", "resource://services-settings/IDBHelpers.sys.mjs", 16))

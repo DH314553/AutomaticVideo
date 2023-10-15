@@ -1,0 +1,62 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: An AWS Serverless Specification template describing your function.
+Resources:
+  awslambdaremotion:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: .
+      Description: ''
+      MemorySize: 128
+      Timeout: 3
+      Handler: lambda_function.lambda_handler
+      Runtime: python3.11
+      Architectures:
+        - x86_64
+      EventInvokeConfig:
+        MaximumEventAgeInSeconds: 21600
+        MaximumRetryAttempts: 2
+      EphemeralStorage:
+        Size: 512
+      Events:
+        Api1:
+          Type: Api
+          Properties:
+            Path: /aws_lambda_remotion
+            Method: ANY
+      FunctionUrlConfig:
+        AuthType: AWS_IAM
+        InvokeMode: BUFFERED
+      SnapStart:
+        ApplyOn: None
+      PackageType: Zip
+      VpcConfig:
+        SecurityGroupIds:
+          - sg-02c2ac72d078aeade
+        SubnetIds:
+          - subnet-03c86e92def0688b8
+          - subnet-0c22ec6555edcd4da
+      Policies:
+        Statement:
+          - Effect: Allow
+            Action:
+              - lambda:InvokeFunction
+            Resource: >-
+              arn:aws:lambda:us-east-2:086894619018:function:aws_lambda_remotion*
+          - Effect: Allow
+            Action:
+              - logs:CreateLogGroup
+            Resource: arn:aws:logs:us-east-2:086894619018:*
+          - Effect: Allow
+            Action:
+              - logs:CreateLogStream
+              - logs:PutLogEvents
+            Resource:
+              - >-
+                arn:aws:logs:us-east-2:086894619018:log-group:/aws/lambda/aws_lambda_remotion:*
+          - Effect: Allow
+            Action:
+              - ec2:CreateNetworkInterface
+              - ec2:DeleteNetworkInterface
+              - ec2:DescribeNetworkInterfaces
+            Resource: '*'
