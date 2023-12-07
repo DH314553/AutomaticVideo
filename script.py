@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import subprocess
 from PySide6.QtWidgets import QApplication, QWidget, QVBoxLayout, QTextEdit, QSlider, QPushButton, QFileDialog, QLineEdit
 from PySide6.QtCore import Qt, QObject, QThread, Signal

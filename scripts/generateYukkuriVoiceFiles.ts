@@ -28,6 +28,6 @@ export const FirstVideoConfig: VideoConfig = ${JSON.stringify(FirstVideoConfig)}
         `
   );
 
-  generateFaceFrameMap(FirstVideoConfig);
-  generateMouthFrameMap(FirstVideoConfig);
+  await generateFaceFrameMap(FirstVideoConfig);
+  await generateMouthFrameMap(FirstVideoConfig);
 })();
